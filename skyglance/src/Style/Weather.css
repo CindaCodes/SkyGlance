@@ -8,7 +8,7 @@
     max-width: 800px;
 }
 
-.Weather h1, .Weather h2 {
+.Weather h1, .Weather span, .Weather sup {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;

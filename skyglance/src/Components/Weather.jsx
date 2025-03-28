@@ -27,16 +27,15 @@ export default function Weather() {
         </div>
       </form>
       <div className="row align-items-center mt-3">
-        <div className="col-2">
+        <div className="col-2  d-flex justify-content-end">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt=""
           />
         </div>
         <div className="col-3">
-          <h2 className="display-1 m-0">
-            24 <sup className="h2">ºC</sup>
-          </h2>
+          <span className="display-1 m-0 temperature">24 </span>
+          <sup className="h2 unit">ºC</sup>
         </div>
         <div className="col-3">
           <ul className="list-unstyled m-0">
