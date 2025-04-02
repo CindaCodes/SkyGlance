@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import FormattedDate from "./Date";
 import WeatherIcon from "./Icon";
 import WeatherTemperature from "./Units";
+import Humidity from "./Humidity";
+import WindCompass from "./Wind";
+import Pressure from "./Pressure";
+import "../Style/Info.css";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("metric");
@@ -21,41 +25,52 @@ export default function WeatherInfo(props) {
   }
 
   return (
-    <div className="row align-items-center mt-3 justify-content-center text-center text-md-start text-nowrap">
-      <div className="col-4">
+    <div className="grid-container">
+      <div className="box" style={{ gridArea: "box-1" }}>
         <h1 className="m-0">{props.data.city}</h1>
-        <ul className="list-unstyled m-0">
-          <li>
-            <FormattedDate
-              date={props.data.date}
-              alt={props.data.description}
-            />
-          </li>
-          <li className="text-capitalize">{props.data.description}</li>
-        </ul>
-      </div>
-
-      <div className="col-12 col-md-3 d-flex flex-row align-items-center justify-content-center justify-content-md-end text-center mt-3 mt-md-0 gap-3">
-        <WeatherIcon code={props.data.icon} />
+        <FormattedDate date={props.data.date} alt={props.data.description} />
         <WeatherTemperature
           metric={props.data.temperature}
           unit={unit}
           onUnitChange={toggleUnit}
         />
       </div>
+      <div
+        className="box align-items-center
+        justify-content-center  text-center"
+        style={{ gridArea: "box-2" }}
+      >
+        <WeatherIcon code={props.data.icon} />
+        <div className="text-capitalize">{props.data.description}</div>
+      </div>
 
-      <div className="col-12 col-md-3 mt-3 mt-md-0">
+      <div className="box" style={{ gridArea: "box-3" }}>
         <ul className="list-unstyled m-0">
           <li>
             Feels Like: {convertTemperature(props.data.feelsLike)}º
             {unit === "metric" ? "C" : "F"}
           </li>
-          <li>Humidity: {props.data.humidity} %</li>
           <li>
             Wind: {convertWind(props.data.wind)}{" "}
             {unit === "metric" ? "km/h" : "mph"}
           </li>
+
+          <li> Humidity: {props.data.humidity}%</li>
+          <li>Pressure: {props.data.pressure} hPa</li>
         </ul>
+      </div>
+      <div className="box" style={{ gridArea: "box-4" }}>
+        <Pressure pressure={props.data.pressure} />
+      </div>
+      <div className="box" style={{ gridArea: "box-5" }}>
+        <Humidity humidity={props.data.humidity} />
+      </div>
+      <div className="box" style={{ gridArea: "box-6" }}>
+        <WindCompass
+          windSpeed={props.data.wind}
+          windDeg={props.data.windDeg}
+          unit={unit}
+        />
       </div>
     </div>
   );

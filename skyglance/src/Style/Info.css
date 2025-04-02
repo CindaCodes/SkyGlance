@@ -1,0 +1,38 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "box-1 box-2 box-3"
+    "box-4 box-5 box-6";
+  gap: 1em;
+  padding: 1em;
+}
+
+.box {
+  background-color: #f5f7fa;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.box ul {
+  padding: 0;
+}
+
+.value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 18px;
+  text-align: center;
+}
