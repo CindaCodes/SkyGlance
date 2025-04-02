@@ -26,7 +26,7 @@ export default function WeatherInfo(props) {
 
   return (
     <div className="grid-container">
-      <div className="box" style={{ gridArea: "box-1" }}>
+      <div className="box text-center" style={{ gridArea: "box-1" }}>
         <h1 className="m-0">{props.data.city}</h1>
         <FormattedDate date={props.data.date} alt={props.data.description} />
         <WeatherTemperature
