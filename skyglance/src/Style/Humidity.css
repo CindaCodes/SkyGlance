@@ -1,0 +1,32 @@
+.humidity-container {
+  text-align: center;
+}
+
+.humidity-bar {
+  background: linear-gradient(
+    to right,
+    #b2ebf2,
+    /* light cyan */ #4dd0e1,
+    /* turquoise */ #0097a7 /* teal */
+  );
+  border-radius: 6px;
+  height: 12px;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+
+.indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3f5468;
+  border: 2px solid white;
+  filter: drop-shadow(0 0 4px #a29bfe);
+  transition: all 0.3s ease;
+}
