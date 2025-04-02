@@ -1299,6 +1299,11 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 
+react-animated-weather@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-animated-weather/-/react-animated-weather-4.0.1.tgz#a9832b84e3a0bb626cd536999a371a1cc5f337e8"
+  integrity sha512-ipEa3yW3rld1UAHAmm7Bltn5BOH3O2B491R0ws51kwFtqQ6fc5KWUiBQ0e4sO/XjoeqCkAN/Y98lWx1qZMR84g==
+
 react-dom@^19.0.0:
   version "19.0.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0.tgz#43446f1f01c65a4cd7f7588083e686a6726cfb57"
@@ -1421,6 +1426,11 @@ vite@^6.2.0:
     rollup "^4.30.1"
   optionalDependencies:
     fsevents "~2.3.3"
+
+weather-icons@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/weather-icons/-/weather-icons-1.3.2.tgz#8ac000f92858427252b80cc57a06bfa827900ac0"
+  integrity sha512-EW/i0gFzlPpyBK29iXtruDw1v9txI4Gjp7q6ikbFTsL6O9gt3yH64/fuMf7wxpj92v5I08JhajBra/wMn715Eg==
 
 which@^2.0.1:
   version "2.0.2"
