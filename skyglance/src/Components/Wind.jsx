@@ -19,11 +19,6 @@ export default function WindCompass({ windSpeed, windDeg, unit }) {
           <div className="dir s">S</div>
           <div className="dir w">W</div>
         </div>
-        <div>
-          <span className="label">
-            {Math.round(windSpeed)} {windUnit}
-          </span>
-        </div>
       </div>
     </div>
   );
