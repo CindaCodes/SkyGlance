@@ -1,0 +1,57 @@
+.compass-container {
+  height: 160px;
+  position: relative;
+  width: 160px;
+}
+
+.compass {
+  background: radial-gradient(circle at center, #2f3e4d 40%, #1f2b38 100%);
+  border-radius: 50%;
+  border: 3px solid #3f4e5a;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 160px;
+  position: relative;
+  width: 160px;
+}
+
+.center-dot {
+  background: #fff;
+  border-radius: 50%;
+  height: 6px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+}
+
+.dir {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.n { top: 4px; left: 50%; transform: translateX(-50%); }
+.e { right: 4px; top: 50%; transform: translateY(-50%); }
+.s { bottom: 4px; left: 50%; transform: translateX(-50%); }
+.w { left: 4px; top: 50%; transform: translateY(-50%); }
+
+.dial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.needle {
+  position: absolute;
+  top: 10%;
+  left: 49%;
+  width: 2px;
+  height: 40%;
+  background-color: red;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in-out;
+}
+
