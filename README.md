@@ -3,7 +3,11 @@
 SkyGlance is a sleek, responsive weather app that provides real-time weather data with a modern, animated interface. Built with React and styled using glassmorphism, it offers a beautifully clean experience on both desktop and mobile.
 
 <p align="center">
-  <img src="./Screenshot.png" alt="SkyGlance preview" width="600" />
+  <img src="./Screenshot.png" alt="Desktop" width="70%" />
+  <br />
+  <img src="./screenshot-tablet.png" alt="Tablet" width="55%" />
+  <br />
+  <img src="./screenshot-mobile.png" alt="Mobile" width="40%" />
 </p>
 
 [🖥️ Live Demo](https://skyglance.netlify.app/)
