@@ -1,13 +1,15 @@
 .custom-footer {
   font-size: 11px;
   text-align: center;
+  color: var(--pink);
 }
 .custom-footer a {
-  color: #007bff;
+  color: var(--light);
   text-decoration: none;
 }
 .custom-footer a:hover {
-  text-decoration: underline;
+  transition: all 0.3s ease-in-out; 
+  transition: scale 0.3s ease-in-out;
 }
 .custom-footer p {
   margin: 0;
