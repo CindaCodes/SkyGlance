@@ -2,12 +2,29 @@
   text-align: center;
 }
 
+.value {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+}
+
+.label {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.advice {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .humidity-bar {
   background: linear-gradient(
     to right,
-    #b2ebf2,
-    /* light cyan */ #4dd0e1,
-    /* turquoise */ #0097a7 /* teal */
+    var(--light),
+    var(--purple),
+    var(--dark)
   );
   border-radius: 6px;
   height: 12px;
@@ -25,8 +42,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #3f5468;
-  border: 2px solid white;
-  filter: drop-shadow(0 0 4px #a29bfe);
+  background-color: var(--pink);
+  border: 2px solid var(--light);
+  filter: drop-shadow(0 0 4px var(--pink));
   transition: all 0.3s ease;
 }
