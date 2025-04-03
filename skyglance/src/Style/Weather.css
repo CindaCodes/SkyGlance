@@ -39,7 +39,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .Weather {
     margin: 10px auto;
     max-width: 98%;
