@@ -1,9 +1,7 @@
 import React from "react";
 import "../Style/Wind.css";
 
-export default function WindCompass({ windSpeed, windDeg, unit }) {
-  const windUnit = unit === "metric" ? "m/s" : "mph";
-
+export default function WindCompass({ windDeg }) {
   return (
     <div className="dial-container">
       <div className="title">💨 Wind</div>
