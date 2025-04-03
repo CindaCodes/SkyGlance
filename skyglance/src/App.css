@@ -1,0 +1,24 @@
+:root {
+  --pink: #fe9a81;
+  --purple: #8572b6;
+  --light: #E9E6DF;
+  --dark: #2f3e4d;
+}
+
+body {
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  
+}
+
+@media (max-width: 770px) {
+  body {
+    height: auto;
+    min-height: 100%;
+  }
+}
