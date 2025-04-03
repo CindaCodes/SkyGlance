@@ -54,7 +54,7 @@ const Pressure = ({ pressure }) => {
 
         <div className="center-dot" />
         <div className="pressure-icon-center">
-          <ReactAnimatedWeather icon={icon} color="#ccc" size={60} animate />
+          <ReactAnimatedWeather icon={icon} color="#E9E6DF" size={60} animate />
         </div>
       </div>
     </div>
