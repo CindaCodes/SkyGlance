@@ -5,28 +5,16 @@
 }
 
 .compass {
-  background: radial-gradient(circle at center, #2f3e4d 40%, #1f2b38 100%);
+ background: radial-gradient(circle at center, var(--purple) 1%, var(--pink) 100%);
   border-radius: 50%;
-  border: 3px solid #3f4e5a;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--pink);
   height: 160px;
   position: relative;
   width: 160px;
 }
 
-.center-dot {
-  background: #fff;
-  border-radius: 50%;
-  height: 6px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 6px;
-}
-
 .dir {
-  color: #ccc;
+  color: var(--light);
   font-size: 12px;
   font-weight: bold;
   position: absolute;
@@ -44,13 +32,4 @@
   justify-content: center;
 }
 
-.needle {
-  position: absolute;
-  top: 10%;
-  left: 49%;
-  width: 2px;
-  height: 40%;
-  background-color: red;
-  transform-origin: bottom center;
-  transition: transform 0.3s ease-in-out;
-}
+/* other styling is in Pressure.css */
