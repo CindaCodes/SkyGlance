@@ -30,7 +30,7 @@ SkyGlance is a sleek, responsive weather app that provides real-time weather dat
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/yourusername/skyglance.git
+git clone https://github.com/CindaCodes/SkyGlance
 cd skyglance
 npm install
 npm run dev
