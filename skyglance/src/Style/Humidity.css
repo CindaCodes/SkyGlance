@@ -35,15 +35,15 @@
 }
 
 .indicator {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
   background-color: var(--pink);
+  border-radius: 50%;
   border: 2px solid var(--light);
   filter: drop-shadow(0 0 4px var(--pink));
+  height: 10px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   transition: all 0.3s ease;
+  width: 10px;
 }

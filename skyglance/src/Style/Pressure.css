@@ -22,14 +22,14 @@
 }
 
 .needle {
+  background-color: var(--dark);
+  height: 40%;
+  left: 49%;
   position: absolute;
   top: 10%;
-  left: 49%;
-  width: 2px;
-  height: 40%;
-  background-color: var(--dark);
   transform-origin: bottom center;
   transition: transform 0.3s ease-in-out;
+  width: 2px;
 }
 
 .center-dot {

@@ -1,7 +1,7 @@
 .custom-footer {
+  color: var(--pink);
   font-size: 11px;
   text-align: center;
-  color: var(--pink);
 }
 .custom-footer a {
   color: var(--light);

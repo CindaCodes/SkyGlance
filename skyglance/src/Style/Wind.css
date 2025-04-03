@@ -5,7 +5,11 @@
 }
 
 .compass {
- background: radial-gradient(circle at center, var(--purple) 1%, var(--pink) 100%);
+  background: radial-gradient(
+    circle at center,
+    var(--purple) 1%,
+    var(--pink) 100%
+  );
   border-radius: 50%;
   border: 3px solid var(--pink);
   height: 160px;
@@ -20,15 +24,31 @@
   position: absolute;
 }
 
-.n { top: 4px; left: 50%; transform: translateX(-50%); }
-.e { right: 4px; top: 50%; transform: translateY(-50%); }
-.s { bottom: 4px; left: 50%; transform: translateX(-50%); }
-.w { left: 4px; top: 50%; transform: translateY(-50%); }
+.n {
+  left: 50%;
+  top: 4px;
+  transform: translateX(-50%);
+}
+.e {
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.s {
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.w {
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .dial-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
