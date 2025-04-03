@@ -9,13 +9,13 @@
 }
 
 .box {
-  background-color: #f5f7fa;
   padding: 1em;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-weight: bold;
 }
 
 .box h1 {
@@ -27,12 +27,54 @@
   padding: 0;
 }
 
+.box:nth-child(odd) {
+  background-color: var(--pink);
+  color: var(--dark);
+}
+
+.box:nth-child(even) {
+  background-color: #8572b6;
+  color: var(--light);
+}
+
 .value {
   font-size: 28px;
+  font-weight: bold;
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: normal;
+}
+a:hover {
   font-weight: bold;
 }
 
 .label {
   font-size: 18px;
   text-align: center;
+}
+
+@media (max-width: 770px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "box-1 box-2"
+      "box-4 box-3"
+      "box-5 box-6";
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "box-1"
+      "box-2"
+      "box-3"
+      "box-4"
+      "box-5"
+      "box-6";
+  }
 }
