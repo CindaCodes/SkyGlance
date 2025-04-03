@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../Style/Weather.css";
 import axios from "axios";
 import WeatherInfo from "./Info";
-import WeatherIcon from "./Icon";
-import Units from "./Units";
+import Footer from "./Footer";
+
 
 export default function Weather(props) {
   const [WeatherData, setWeatherData] = useState({ ready: false });
@@ -15,6 +15,7 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
+      windDeg: response.data.wind.degree,
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       pressure: response.data.temperature.pressure,
@@ -58,15 +59,12 @@ export default function Weather(props) {
               />
             </div>
             <div className="col-12 col-sm-3">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
-              />
+              <input type="submit" value="Search" className="btn w-100" />
             </div>
           </div>
         </form>
         <WeatherInfo data={WeatherData} />
+        <Footer />
       </div>
     );
   } else {
