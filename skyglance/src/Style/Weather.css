@@ -8,7 +8,10 @@
   margin: 20px auto;
   max-width: 800px;
   padding: 20px;
-  
+}
+
+.Weather form {
+  margin: 16px 16px 0 16px;
 }
 
 .Weather input {
@@ -22,7 +25,7 @@
 }
 
 .Weather .btn {
-  background: var(--pink);
+  background-color: rgba(252, 154, 129, 0.65);
   border-radius: 8px;
   color: var(--dark);
   cursor: pointer;
