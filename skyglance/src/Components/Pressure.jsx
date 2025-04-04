@@ -21,7 +21,7 @@ const Pressure = ({ pressure }) => {
 
   return (
     <div className="dial-container">
-      <div className="title">🕰️ Barometer</div>
+      <div className="title">Barometer</div>
       <div className="pressure-gauge-full">
         <div
           className="needle"
@@ -52,7 +52,7 @@ const Pressure = ({ pressure }) => {
         })}
 
         <div className="center-dot" />
-        <div className="pressure-icon-center">
+        <div className="icon-center">
           <ReactAnimatedWeather icon={icon} color="#2f3e4d" size={60} animate />
         </div>
       </div>
