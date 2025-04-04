@@ -9,7 +9,6 @@ import "../Style/Info.css";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("metric");
-  console.log(props.data);
 
   function toggleUnit(newUnit) {
     setUnit(newUnit);
