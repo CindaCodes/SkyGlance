@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "../Style/WeeklyForecast.css";
+import axios from "axios";
 import ForecastDay from "./ForecastDay";
+import React, { useState, useEffect } from "react";
 
 export default function WeeklyForecast({ city, unit }) {
   const [forecast, setForecast] = useState(null);

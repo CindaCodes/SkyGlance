@@ -14,18 +14,18 @@
 }
 
 .icon-center {
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink), 0 0 24px var(--pink);
+  display: flex;
+  height: 75px;
+  justify-content: center;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  box-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink), 0 0 24px var(--pink);
-  border-radius: 50%;
   width: 75px;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
 }
 
 

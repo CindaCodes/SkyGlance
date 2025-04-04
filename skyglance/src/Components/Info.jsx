@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import FormattedDate from "./Date";
-import WeatherIcon from "./Icon";
-import UnitButton from "./Units";
-import Humidity from "./Humidity";
-import WindCompass from "./Wind";
-import Pressure from "./Pressure";
-import WeeklyForecast from "./WeeklyForecast";
 import "../Style/Info.css";
+import FormattedDate from "./Date";
+import Humidity from "./Humidity";
+import Pressure from "./Pressure";
+import React, { useState } from "react";
+import UnitButton from "./Units";
+import WeatherIcon from "./Icon";
+import WeeklyForecast from "./WeeklyForecast";
+import WindCompass from "./Wind";
 
 
 export default function WeatherInfo(props) {
@@ -83,7 +83,7 @@ export default function WeatherInfo(props) {
       <div className="box" style={{ gridArea: "box-6" }}>
         <WindCompass windDeg={props.data.windDeg} />
       </div>
-      <div className="box" style={{ gridArea: "box-8" }}>
+      <div className="box" style={{ gridArea: "box-7" }}>
         <WeeklyForecast city={props.data.city} unit={unit} />
       </div>
     </div>
