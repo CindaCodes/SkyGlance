@@ -9,6 +9,7 @@ import "../Style/Info.css";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("metric");
+  console.log(props.data);
 
   function toggleUnit(newUnit) {
     setUnit(newUnit);
@@ -40,7 +41,7 @@ export default function WeatherInfo(props) {
         justify-content-center  text-center"
         style={{ gridArea: "box-2" }}
       >
-        <WeatherIcon code={props.data.description} size={120} style={{ opacity: 0, pointerEvents: "none" }}/>
+        <WeatherIcon code={props.data.icon} size={120} style={{ opacity: 0, pointerEvents: "none" }}/>
         <div className="text-capitalize">{props.data.description}</div>
       </div>
 
