@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Style/Weather.css";
 import axios from "axios";
 import WeatherInfo from "./Info";
 import Footer from "./Footer";
-
+import { Circles } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [WeatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -27,8 +27,8 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = import.meta.env.VITE_API_KEY;
-    let units = "metric";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+    const units = "metric";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -41,33 +41,46 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  if (WeatherData.ready) {
+  // ⬇️ Run the initial search ONCE on mount
+  useEffect(() => {
+    search();
+  }, []);
+
+  if (!WeatherData.ready) {
     return (
-      <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-12 col-sm-9 mb-2 mb-sm-0">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                className="form-control"
-                autoFocus
-                autoCapitalize="words"
-                value={city}
-                onChange={handleCityChange}
-              />
-            </div>
-            <div className="col-12 col-sm-3">
-              <input type="submit" value="Search" className="btn w-100" />
-            </div>
-          </div>
-        </form>
-        <WeatherInfo data={WeatherData} />
-        <Footer />
+      <div className="loader-container">
+        <Circles
+          height="80"
+          width="80"
+          color="var(--purple)"
+          ariaLabel="loading"
+        />
       </div>
     );
-  } else {
-    search();
-    return "Loading...";
   }
+
+  return (
+    <div className="Weather">
+      <form onSubmit={handleSubmit}>
+        <div className="row">
+          <div className="col-12 col-sm-9 mb-2 mb-sm-0">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              className="form-control"
+              autoFocus
+              autoCapitalize="words"
+              value={city}
+              onChange={handleCityChange}
+            />
+          </div>
+          <div className="col-12 col-sm-3">
+            <input type="submit" value="Search" className="btn w-100" />
+          </div>
+        </div>
+      </form>
+      <WeatherInfo data={WeatherData} />
+      <Footer />
+    </div>
+  );
 }
