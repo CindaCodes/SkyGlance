@@ -7,7 +7,7 @@
   margin: 0 16px 16px 16px;
   padding: 10px;
   border-radius: 10px;
-  background-color: rgba(133, 114, 182, 0.6);
+  background-color: rgba(133, 114, 182, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--light);
 }

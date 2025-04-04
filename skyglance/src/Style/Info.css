@@ -29,13 +29,13 @@
 }
 
 .box:nth-child(odd) {
-  background-color: rgba(252, 154, 129, 0.6);
+  background-color: rgba(252, 154, 129, 0.7);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--dark);
 }
 
 .box:nth-child(even) {
-  background-color: rgba(133, 114, 182, 0.6);
+  background-color: rgba(133, 114, 182, 0.7);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--light);
 }
