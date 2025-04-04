@@ -1,7 +1,7 @@
 .pressure-gauge-full {
   background: radial-gradient(circle at center, var(--purple) 1%, var(--pink) 100%);
   border-radius: 50%;
-  border: 3px solid var(--pink);
+  box-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink), 0 0 24px var(--pink);
   height: 160px;
   position: relative;
   width: 160px;
@@ -13,33 +13,42 @@
   position: absolute;
 }
 
-.pressure-icon-center {
+.icon-center {
   left: 50%;
   position: absolute;
-  top: 52%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  box-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink), 0 0 24px var(--pink);
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .needle {
   background-color: var(--dark);
   height: 40%;
-  left: 49%;
+  left: 50%;
   position: absolute;
   top: 10%;
   transform-origin: bottom center;
   transition: transform 0.3s ease-in-out;
   width: 2px;
+  z-index: 2;
 }
 
 .center-dot {
   background: var(--pink);
   border-radius: 50%;
-  height: 12px;
+  height: 8px;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 12px;
+  width: 8px;
   z-index: 3;
 }
