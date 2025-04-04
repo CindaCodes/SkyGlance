@@ -7,7 +7,7 @@ export default function Humidity({ humidity }) {
     if (value < 50) return "Dry 🌵";
     if (value < 75) return "Comfortable 😊";
     if (value < 80) return "Sticky 😓";
-    return "Humid 🥵";
+    return "Humid 💦";
   };
 
   const getAdvice = (humidity) => {
