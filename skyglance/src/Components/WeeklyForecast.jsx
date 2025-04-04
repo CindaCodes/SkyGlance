@@ -4,54 +4,52 @@ import "../Style/WeeklyForecast.css";
 import ForecastDay from "./ForecastDay";
 
 export default function WeeklyForecast(props) {
-  let [loaded, setLoaded] = useState(false);
-  let [forecast, setForecast] = useState(null);
+  const [forecast, setForecast] = useState(null);
   const [daysToShow, setDaysToShow] = useState(5);
 
- useEffect(() => {
-   const updateDaysToShow = () => {
-     const width = window.innerWidth;
+  // Responsive layout logic
+  useEffect(() => {
+    const updateDaysToShow = () => {
+      const width = window.innerWidth;
+      if (width >= 770) {
+        setDaysToShow(6);
+      } else if (width >= 600) {
+        setDaysToShow(5);
+      } else {
+        setDaysToShow(4);
+      }
+    };
 
-     if (width >= 770) {
-       setDaysToShow(6); // Desktop
-     } else if (width >= 600) {
-       setDaysToShow(5); // Tablet (iPad)
-     } else {
-       setDaysToShow(4); // Mobile
-     }
-   };
+    updateDaysToShow();
+    window.addEventListener("resize", updateDaysToShow);
+    return () => window.removeEventListener("resize", updateDaysToShow);
+  }, []);
 
-   updateDaysToShow(); 
-   window.addEventListener("resize", updateDaysToShow);
+  // Fetch forecast when city changes
+  useEffect(() => {
+    const apiKey = import.meta.env.VITE_API_KEY;
+    const city = props.city;
+    const apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
-   return () => window.removeEventListener("resize", updateDaysToShow);
- }, []);
+    axios.get(apiUrl).then((response) => {
+      setForecast(response.data.daily);
+    });
+  }, [props.city]); // <-- re-run when city changes
 
-  function handleResponse(response) {
-    setForecast(response.data.daily);
-    setLoaded(true);
-  }
-
-  if (loaded) {
-    return (
-      <div className="WeeklyForecast">
-        <h6 className="title">Forecast</h6>
-        <div className="row justify-content-between">
-          {forecast.slice(0, daysToShow).map((dailyForecast, index) => (
-            <div className="col" key={index}>
-              <ForecastDay forecast={dailyForecast} />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  } else {
-    let apiKey = import.meta.env.VITE_API_KEY;
-    let city = props.city;
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse);
-
+  if (!forecast) {
     return null;
   }
+
+  return (
+    <div className="WeeklyForecast">
+      <h6 className="title">Forecast</h6>
+      <div className="row justify-content-between">
+        {forecast.slice(0, daysToShow).map((dailyForecast, index) => (
+          <div className="col" key={index}>
+            <ForecastDay forecast={dailyForecast} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
