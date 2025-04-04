@@ -33,7 +33,6 @@ export default function WeeklyForecast(props) {
   }
 
   if (loaded) {
-    console.log(forecast);
     return (
       <div className="WeeklyForecast">
         <h6 className="title">Forecast</h6>
