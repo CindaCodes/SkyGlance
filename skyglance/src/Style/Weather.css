@@ -5,17 +5,17 @@
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 800px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .Weather form {
-  margin: 16px 16px 0 16px;
+  margin: 5px;
 }
 
 .Weather input {
-  background: var(--light);
+background-color: rgba(252, 154, 129, 0.7);
   border-radius: 8px;
   border: none;
   color: var(--dark);
@@ -23,6 +23,8 @@
   font-weight: bold;
   padding: 10px;
 }
+
+
 
 .Weather .btn {
   background-color: rgba(252, 154, 129, 0.7);
