@@ -15,7 +15,7 @@
 }
 
 .Weather input {
-background-color: rgba(252, 154, 129, 0.7);
+  background-color: var(--light);
   border-radius: 8px;
   border: none;
   color: var(--dark);
@@ -23,8 +23,6 @@ background-color: rgba(252, 154, 129, 0.7);
   font-weight: bold;
   padding: 10px;
 }
-
-
 
 .Weather .btn {
   background-color: rgba(252, 154, 129, 0.7);
@@ -48,21 +46,26 @@ background-color: rgba(252, 154, 129, 0.7);
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh; 
+  height: 100vh;
   justify-content: center;
   text-align: center;
 }
 
-
 @media (max-width: 770px) {
+  .container {
+    padding: 0 !important;
+  }
+
   .Weather {
-    margin: 10px auto;
+    margin: 0;
     max-width: 98%;
     padding: 10px;
   }
+
   .Weather h1 {
     font-size: 24px;
   }
+
   .Weather li {
     font-size: 14px;
   }
