@@ -12,7 +12,7 @@ export default function Humidity({ humidity }) {
 
   const getAdvice = (humidity) => {
     if (humidity < 30) return "Air is dry — use a humidifier.";
-    if (humidity < 60) return "Comfortable humidity.";
+    if (humidity < 60) return "Just right — enjoy the day!";
     if (humidity < 80) return "Slightly humid — stay hydrated.";
     return "Very humid — take it easy and drink water.";
   };
@@ -22,7 +22,7 @@ export default function Humidity({ humidity }) {
 
   return (
     <div className="humidity-container">
-      <div className="title">💧 Humidity</div>
+      <div className="title">Humidity</div>
       <div className="value">{humidity}%</div>
       <div className="label">{getLabel(humidity)}</div>
 
