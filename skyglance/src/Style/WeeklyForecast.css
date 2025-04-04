@@ -1,0 +1,36 @@
+.WeeklyForecast {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px 16px 16px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(133, 114, 182, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--light);
+}
+
+.WeeklyForecast .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.WeeklyForecast .col {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.WeeklyForecast .temperature {
+  white-space: nowrap;
+}
+
+.WeeklyForecast .min {
+  margin-left: 5px;
+  color : var(--pink);
+}
+
