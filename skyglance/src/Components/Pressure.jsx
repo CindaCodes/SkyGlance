@@ -28,7 +28,6 @@ const Pressure = ({ pressure }) => {
           style={{ transform: `rotate(${rotation}deg)` }}
         />
 
-        {/* Labels spaced clockwise with 970 at bottom */}
         {pressureLabels.map((value, index) => {
           const angle = 90 + (index / pressureLabels.length) * 360;
           const radius = 60;
@@ -54,7 +53,7 @@ const Pressure = ({ pressure }) => {
 
         <div className="center-dot" />
         <div className="pressure-icon-center">
-          <ReactAnimatedWeather icon={icon} color="#E9E6DF" size={60} animate />
+          <ReactAnimatedWeather icon={icon} color="#2f3e4d" size={60} animate />
         </div>
       </div>
     </div>
