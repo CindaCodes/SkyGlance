@@ -7,16 +7,20 @@
   font-size: 24px;
 }
 
+.title {
+  margin-bottom: 10px;
+}
+
 .label {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
 .advice {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .humidity-bar {
@@ -38,6 +42,7 @@
   background-color: var(--pink);
   border-radius: 50%;
   border: 2px solid var(--light);
+  box-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink), 0 0 24px var(--pink);
   filter: drop-shadow(0 0 4px var(--pink));
   height: 10px;
   left: 50%;

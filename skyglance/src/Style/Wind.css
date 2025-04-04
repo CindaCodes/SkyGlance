@@ -11,7 +11,7 @@
     var(--pink) 100%
   );
   border-radius: 50%;
-  border: 3px solid var(--pink);
+ box-shadow: 0 0 8px var(--pink), 0 0 16px var(--pink), 0 0 24px var(--pink);
   height: 160px;
   position: relative;
   width: 160px;
