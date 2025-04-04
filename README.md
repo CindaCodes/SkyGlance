@@ -29,17 +29,7 @@ SkyGlance is a sleek, responsive weather app that provides real-time weather dat
 
 <div align="center" style="display: flex; justify-content: center; gap: 1.5rem;">
   <div>
-    <img src="./Screenshot.png" alt="Desktop" style="height: 300px;" />
-    <p align="center"><strong>Desktop</strong></p>
-  </div>
-  <div>
-    <img src="./screenshot-tablet.png" alt="Tablet" style="height: 300px;" />
-    <p align="center"><strong>Tablet</strong></p>
-  </div>
-  <div>
-    <img src="./screenshot-mobile.png" alt="Mobile" style="height: 300px;" />
-    <p align="center"><strong>Mobile</strong></p>
-  </div>
+    <img src="./DeviceMockUp.png" alt="Desktop" style="height: 300px;" />
 </div>
 
 
