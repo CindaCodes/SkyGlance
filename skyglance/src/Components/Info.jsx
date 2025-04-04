@@ -40,7 +40,7 @@ export default function WeatherInfo(props) {
         justify-content-center  text-center"
         style={{ gridArea: "box-2" }}
       >
-        <WeatherIcon code={props.data.icon} />
+        <WeatherIcon code={props.data.description} size={120} style={{ opacity: 0, pointerEvents: "none" }}/>
         <div className="text-capitalize">{props.data.description}</div>
       </div>
 
