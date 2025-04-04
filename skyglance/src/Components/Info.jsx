@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import FormattedDate from "./Date";
 import WeatherIcon from "./Icon";
-import WeatherTemperature from "./Units";
+import UnitButton from "./Units";
 import Humidity from "./Humidity";
 import WindCompass from "./Wind";
 import Pressure from "./Pressure";
+import WeeklyForecast from "./WeeklyForecast";
 import "../Style/Info.css";
+
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("metric");
@@ -28,9 +30,17 @@ export default function WeatherInfo(props) {
     <div className="grid-container">
       <div className="box text-center" style={{ gridArea: "box-1" }}>
         <h1 className="m-0">{props.data.city}</h1>
+        <div>
+          <span className="display-1 m-0 temperature">
+            {convertTemperature(props.data.temperature)}
+          </span>
+          <sup>{unit === "metric" ? "ºC" : "ºF"}</sup>
+        </div>
+
         <FormattedDate date={props.data.date} alt={props.data.description} />
-        <WeatherTemperature
-          metric={props.data.temperature}
+
+        <UnitButton
+          temperature={convertTemperature(props.data.temperature)}
           unit={unit}
           onUnitChange={toggleUnit}
         />
@@ -40,7 +50,11 @@ export default function WeatherInfo(props) {
         justify-content-center  text-center"
         style={{ gridArea: "box-2" }}
       >
-        <WeatherIcon code={props.data.icon} size={120} style={{ opacity: 0, pointerEvents: "none" }}/>
+        <WeatherIcon
+          code={props.data.icon}
+          size={120}
+          style={{ opacity: 0, pointerEvents: "none" }}
+        />
         <div className="text-capitalize">{props.data.description}</div>
       </div>
 
@@ -68,6 +82,9 @@ export default function WeatherInfo(props) {
       </div>
       <div className="box" style={{ gridArea: "box-6" }}>
         <WindCompass windDeg={props.data.windDeg} />
+      </div>
+      <div className="box" style={{ gridArea: "box-8" }}>
+        <WeeklyForecast city={props.data.city} unit={unit} />
       </div>
     </div>
   );

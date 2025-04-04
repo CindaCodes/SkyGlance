@@ -3,7 +3,6 @@ import "../Style/Weather.css";
 import axios from "axios";
 import WeatherInfo from "./Info";
 import Footer from "./Footer";
-import WeeklyForecast from "./WeeklyForecast";
 
 
 export default function Weather(props) {
@@ -64,7 +63,6 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={WeatherData} />
-        <WeeklyForecast city={WeatherData.city} />
         <Footer />
       </div>
     );
