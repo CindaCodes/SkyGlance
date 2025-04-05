@@ -58,8 +58,9 @@
 
   .Weather {
     margin: 0;
-    max-width: 98%;
+    width: 100vw;
     padding: 10px;
+    border-radius: 0;
   }
 
   .Weather h1 {
