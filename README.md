@@ -19,7 +19,7 @@ Check it out here: [**SkyGlance**](https://skyglance.netlify.app)
 
 ## 🌟 Features
 
-- 🌎 Search by city (default: Denver)
+- 🌎 Search by city (default: Oslo)
 - 🌡 Toggle between °C / °F
 - 📈 Historical temperature trend graph
 - 🗓 6-day forecast
