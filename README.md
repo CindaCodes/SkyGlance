@@ -1,46 +1,51 @@
-🌤️ SkyGlance
-SkyGlance is a sleek, responsive weather app that provides real-time weather data with a modern, animated interface. Built with React and styled using glassmorphism, it delivers a beautifully clean experience across desktop and mobile devices.
+# 🌤️ SkyGlance
 
-🔗 Live Demo
+Your modern weather app built with React + Vite — get current conditions, daily forecasts, and trend data at a glance.
 
-✨ Features
-🔍 City Search with real-time weather updates
+---
 
-🌡️ Detailed Weather Metrics: temperature, feels like, humidity, wind speed/direction, and air pressure
+## 🚀 Live Demo  
+Check it out here: [**SkyGlance**](https://skyglance.netlify.app)
 
-🎯 Custom Pressure Gauge with animated needle and theme integration
+---
 
-🌍 World Clock Integration for global time awareness
+## 📸 Preview
 
-🎨 Themed Design using CSS variables and gradient styling
+<p align="center">
+  <img src="./DeviceMockUp.png" alt="SkyGlance Desktop Preview" width="600" />
+</p>
 
-📱 Fully Responsive: mobile-first layout optimized for all screen sizes
+---
 
-🛠️ Tech Stack
-⚛️ React (Vite setup)
+## 🌟 Features
 
-🎨 CSS3 + CSS Variables (Glassmorphism, Responsive Grid)
+- 🌎 Search by city (default: Denver)
+- 🌡 Toggle between °C / °F
+- 📈 Historical temperature trend graph
+- 🗓 6-day forecast
+- 🍃 Air Quality Index bar
+- 🔄 Auto-refreshing data
+- 💨 Live weather icons
+- 🌀 Smooth loading spinner
 
-🌈 ReactAnimatedWeather for dynamic weather icons
+---
 
-🌐 SheCodes Weather API for real-time weather data
+## 🛠️ Tech Stack
 
-🚀 Netlify for deployment
+- **React** + **Vite**
+- **SheCodes Weather API**
+- **Chart.js** for historical trends
+- **React Animated Weather** for icons
+- **Bootstrap**
 
-📸 Preview
-
-<div align="center" style="display: flex; justify-content: center; gap: 1.5rem;">
-  <div>
-    <img src="./DeviceMockUp.png" alt="Desktop" style="height: 300px;" />
-</div>
-
-
+---
 
 ## 🚀 Getting Started
 
+Clone the repo and run it locally:
+
 ```bash
-git clone https://github.com/CindaCodes/SkyGlance
-cd skyglance
+git clone https://github.com/CindaCodes/SkyGlance.git
+cd SkyGlance
 npm install
 npm run dev
-
