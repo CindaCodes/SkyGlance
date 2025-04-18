@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Footer from "./Components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Weather from "./Components/Weather";
 
