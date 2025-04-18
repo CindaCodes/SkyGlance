@@ -2,6 +2,7 @@ import "../Style/WeeklyForecast.css";
 import axios from "axios";
 import ForecastDay from "./ForecastDay";
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function WeeklyForecast({ city, unit }) {
   const [forecast, setForecast] = useState(null);
@@ -43,8 +44,10 @@ export default function WeeklyForecast({ city, unit }) {
     <div className="WeeklyForecast">
       <h6 className="title">Forecast</h6>
       <div className="row justify-content-between">
-        {forecast.slice(0, daysToShow).map((dailyForecast, index) => (
-          <div className="col" key={index}>
+        {forecast.slice(0, daysToShow).map((dailyForecast) => (
+          <div className="col" key={dailyForecast.time}>
+            {" "}
+            {/* Use a unique identifier */}
             <ForecastDay forecast={dailyForecast} unit={unit} />
           </div>
         ))}
@@ -52,3 +55,8 @@ export default function WeeklyForecast({ city, unit }) {
     </div>
   );
 }
+
+WeeklyForecast.propTypes = {
+  city: PropTypes.string.isRequired,
+  unit: PropTypes.string.isRequired,
+};

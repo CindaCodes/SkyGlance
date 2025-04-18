@@ -1,10 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../Style/Units.css";
 
-export default function UnitButton({
-  unit,
-  onUnitChange,
-}) {
+export default function UnitButton({ unit, onUnitChange }) {
   const toggleUnit = () => {
     onUnitChange(unit === "metric" ? "imperial" : "metric");
   };
@@ -19,3 +17,8 @@ export default function UnitButton({
     </div>
   );
 }
+
+UnitButton.propTypes = {
+  unit: PropTypes.oneOf(["metric", "imperial"]).isRequired,
+  onUnitChange: PropTypes.func.isRequired,
+};

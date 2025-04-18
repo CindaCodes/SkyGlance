@@ -4,6 +4,7 @@ import axios from "axios";
 import WeatherInfo from "./Info";
 import Footer from "./Footer";
 import { Circles } from "react-loader-spinner";
+import PropTypes from "prop-types"; // Import PropTypes
 
 export default function Weather(props) {
   const [WeatherData, setWeatherData] = useState({ ready: false });
@@ -41,7 +42,6 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  // ⬇️ Run the initial search ONCE on mount
   useEffect(() => {
     search();
   }, []);
@@ -84,3 +84,8 @@ export default function Weather(props) {
     </div>
   );
 }
+
+
+Weather.propTypes = {
+  defaultCity: PropTypes.string.isRequired, 
+};

@@ -1,6 +1,7 @@
 import React from "react";
 import "../Style/Wind.css";
 import ReactAnimatedWeather from "react-animated-weather";
+import PropTypes from "prop-types";
 
 export default function WindCompass({ windDeg }) {
   return (
@@ -30,3 +31,8 @@ export default function WindCompass({ windDeg }) {
     </div>
   );
 }
+
+
+WindCompass.propTypes = {
+  windDeg: PropTypes.number.isRequired,
+};

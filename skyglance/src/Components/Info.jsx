@@ -7,7 +7,7 @@ import UnitButton from "./Units";
 import WeatherIcon from "./Icon";
 import WeeklyForecast from "./WeeklyForecast";
 import WindCompass from "./Wind";
-
+import PropTypes from "prop-types";
 
 export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("metric");
@@ -89,3 +89,19 @@ export default function WeatherInfo(props) {
     </div>
   );
 }
+
+
+WeatherInfo.propTypes = {
+  data: PropTypes.shape({
+    city: PropTypes.string.isRequired, 
+    temperature: PropTypes.number.isRequired,
+    wind: PropTypes.number.isRequired,
+    windDeg: PropTypes.number.isRequired, 
+    humidity: PropTypes.number.isRequired, 
+    description: PropTypes.string.isRequired,
+    pressure: PropTypes.number.isRequired, 
+    icon: PropTypes.string.isRequired, 
+    date: PropTypes.instanceOf(Date).isRequired, 
+    feelsLike: PropTypes.number.isRequired, 
+  }).isRequired, 
+};

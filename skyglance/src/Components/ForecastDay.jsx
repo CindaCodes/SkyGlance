@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import WeatherIcon from "./Icon";
+import PropTypes from "prop-types"; // Import PropTypes
 
 export default function ForecastDay({ forecast, unit }) {
   const [iconSize, setIconSize] = useState(45);
@@ -47,3 +48,18 @@ export default function ForecastDay({ forecast, unit }) {
     </div>
   );
 }
+
+
+ForecastDay.propTypes = {
+  forecast: PropTypes.shape({
+    time: PropTypes.number.isRequired,
+    condition: PropTypes.shape({
+      icon: PropTypes.string.isRequired,
+    }).isRequired,
+    temperature: PropTypes.shape({
+      maximum: PropTypes.number.isRequired,
+      minimum: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+  unit: PropTypes.string.isRequired,
+};

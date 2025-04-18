@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../Style/Humidity.css";
 
 export default function Humidity({ humidity }) {
@@ -17,7 +18,7 @@ export default function Humidity({ humidity }) {
     return "Very humid — take it easy and drink water.";
   };
 
-  const percent = Math.min(humidity, 100); 
+  const percent = Math.min(humidity, 100);
   const leftPosition = `${percent}%`;
 
   return (
@@ -33,3 +34,8 @@ export default function Humidity({ humidity }) {
     </div>
   );
 }
+
+
+Humidity.propTypes = {
+  humidity: PropTypes.number.isRequired,
+};

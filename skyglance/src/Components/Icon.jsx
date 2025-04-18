@@ -1,5 +1,6 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
+import PropTypes from "prop-types"; 
 
 function getWeatherIcon(code) {
   const iconMapping = {
@@ -36,3 +37,9 @@ export default function WeatherIcon(props) {
     />
   );
 }
+
+
+WeatherIcon.propTypes = {
+  code: PropTypes.string.isRequired, 
+  size: PropTypes.number.isRequired, 
+};

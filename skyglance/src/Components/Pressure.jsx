@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; 
 import ReactAnimatedWeather from "react-animated-weather";
 import "../Style/Pressure.css";
 
@@ -58,6 +59,10 @@ const Pressure = ({ pressure }) => {
       </div>
     </div>
   );
+};
+
+Pressure.propTypes = {
+  pressure: PropTypes.number.isRequired,
 };
 
 export default Pressure;
