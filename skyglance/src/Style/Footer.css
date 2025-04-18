@@ -2,15 +2,28 @@
   color: var(--pink);
   font-size: 11px;
   text-align: center;
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.custom-footer p {
+  text-align: center;
+  width: 100%;
+}
+
 .custom-footer a {
   color: var(--light);
   text-decoration: none;
+  word-break: break-word;
 }
+
 .custom-footer a:hover {
-  transition: all 0.3s ease-in-out; 
-  transition: scale 0.3s ease-in-out;
-}
-.custom-footer p {
-  margin: 0;
+  transition: all 0.3s ease-in-out;
+  scale: 1.05;
 }

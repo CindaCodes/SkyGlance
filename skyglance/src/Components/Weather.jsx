@@ -4,7 +4,7 @@ import axios from "axios";
 import WeatherInfo from "./Info";
 import Footer from "./Footer";
 import { Circles } from "react-loader-spinner";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types";
 
 export default function Weather(props) {
   const [WeatherData, setWeatherData] = useState({ ready: false });
