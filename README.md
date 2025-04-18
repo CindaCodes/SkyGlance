@@ -1,11 +1,11 @@
 # 🌤️ SkyGlance
 
-Your sleek, modern weather app built with React + Vite — get current conditions, daily forecasts, and trend data at a glance.
+Your modern weather app built with React + Vite — get current conditions, daily forecasts, and trend data at a glance.
 
-🔗 **Live Demo**: [https://skyglance.netlify.app](https://skyglance.netlify.app)
+## 🚀 Live Demo 
+Check it out here:[**Sky Glance**](https://skyglance.netlify.app)
 
 📸 Preview
-
 <div align="center" style="display: flex; justify-content: center; gap: 1.5rem;">
   <div>
     <img src="./DeviceMockUp.png" alt="Desktop" style="height: 300px;" />
@@ -14,7 +14,6 @@ Your sleek, modern weather app built with React + Vite — get current condition
 ---
 
 ## 🌟 Features
-
 - 🌎 Search by city (default: Denver)
 - 🌡 Toggle between °C / °F
 - 📈 Historical temperature trend graph
@@ -27,7 +26,6 @@ Your sleek, modern weather app built with React + Vite — get current condition
 ---
 
 ## 🛠️ Tech Stack
-
 - **React** + **Vite**
 - **SheCodes Weather API**
 - **Chart.js** for historical trends
