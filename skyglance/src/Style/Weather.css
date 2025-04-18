@@ -57,7 +57,7 @@
   }
 
   .Weather {
-    margin: auto;
+    margin: 0 !important;
     width: 100vw;
     padding: 10px;
     border-radius: 0;
